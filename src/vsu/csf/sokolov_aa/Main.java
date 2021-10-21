@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 public class Main {
 
-
-
     public static void main(String[] args) {
         int h = readIntFromConsole("Enter h ");
         printFigure(h);
@@ -31,14 +29,10 @@ public class Main {
         }
     }
 
-    public static boolean isOdd(int n) {
-        return n % 2 != 0;
-    }
-
     public static int readIntFromConsole(String message) {
         Scanner in = new Scanner(System.in);
 
-        System.out.print("\n" + message + "   ");
+        System.out.print("\n" + message + " ");
         return in.nextInt();
     }
 }
