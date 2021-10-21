@@ -16,12 +16,15 @@ public class Main {
      * h is amount of lines and maximum amount of symbols in particular line
      */
     public static void printFigure(int h) {
+
+        char symbol = 'a';
         for(int j = 1; j <= h; j++) {
             for (int i = 1; i <= j; i++) {
-                if (isOdd(i)) {
-                    System.out.print("a");
+                System.out.print(symbol);
+                if(symbol == 'a') {
+                    symbol++;
                 } else {
-                    System.out.print("b");
+                    symbol--;
                 }
             }
             System.out.println();
