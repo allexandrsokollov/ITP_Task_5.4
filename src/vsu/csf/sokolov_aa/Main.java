@@ -14,12 +14,14 @@ public class Main {
      * h is amount of lines and maximum amount of symbols in particular line
      */
     public static void printFigure(int h) {
-
         char symbol = 'a';
-        for(int j = 1; j <= h; j++) {
+
+        for (int j = 1; j <= h; j++) {
             for (int i = 1; i <= j; i++) {
+
                 System.out.print(symbol);
-                if(symbol == 'a') {
+
+                if (symbol == 'a') {
                     symbol++;
                 } else {
                     symbol--;
