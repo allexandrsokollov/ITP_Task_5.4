@@ -17,15 +17,19 @@ public class Main {
         char symbol = 'a';
 
         for (int j = 1; j <= h; j++) {
-            for (int i = 1; i <= j; i++) {
+            if (!isOdd(j)) {
+                symbol++;
+            }
+            System.out.print(symbol);
 
-                System.out.print(symbol);
-
+            for (int i = 2; i <= j; i++) {
                 if (symbol == 'a') {
                     symbol++;
                 } else {
                     symbol--;
                 }
+
+                System.out.print(symbol);
             }
             System.out.println();
         }
@@ -36,5 +40,9 @@ public class Main {
 
         System.out.print("\n" + message + " ");
         return in.nextInt();
+    }
+
+    public static boolean isOdd(int n) {
+        return n % 2 == 1;
     }
 }
