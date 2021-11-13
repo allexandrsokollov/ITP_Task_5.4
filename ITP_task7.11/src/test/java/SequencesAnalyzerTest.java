@@ -12,7 +12,7 @@ class SequencesAnalyzerTest {
                 {1,2,1,2,1,2,1,2}, {2,1,2,1,2,1,2,1,2,1}, {5,5,5,4,3,5,5,5,4,3,5,5,},
                 {1,2,3,4,5,6,7,8,9,}};
 
-        int[] expectedResults = new int[] {1, 1, 2, 1, 0, 1, 0, 5, 2, 0};
+        int[] expectedResults = new int[] {1, 1, 2, 1, 0, 1, 3, 5, 2, 0};
 
         for (int i = 0; i < AMOUNT_OF_SEQUENCES; i++) {
             assertEquals(expectedResults[i], SequencesAnalyzer.findAmountOfMonotoneSequences(sequences[i]));
