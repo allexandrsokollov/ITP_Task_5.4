@@ -1,4 +1,6 @@
-public class SequencesAnalyzer {
+import java.util.Random;
+
+public class Sequences {
 
     public static int findAmountOfMonotoneSequences (int[] arr) {
 
@@ -17,5 +19,15 @@ public class SequencesAnalyzer {
         }
 
         return  amountOfMonotoneSequences;
+    }
+
+    public static int[] getIntArrWithRandomNumbers(int arrLength) {
+        int[] toReturn = new int[arrLength];
+        Random random = new Random();
+        for (int i = 0; i < arrLength; i++) {
+            toReturn[i] = random.nextInt(20);
+        }
+
+        return toReturn;
     }
 }

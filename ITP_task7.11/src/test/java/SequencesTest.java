@@ -1,6 +1,8 @@
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-class SequencesAnalyzerTest {
+class SequencesTest {
 
     @org.junit.jupiter.api.Test
     void findAmountOfMonotoneSequences() {
@@ -14,8 +16,16 @@ class SequencesAnalyzerTest {
 
         int[] expectedResults = new int[] {1, 1, 2, 1, 0, 1, 3, 5, 2, 0};
 
+        int expected, real;
+
         for (int i = 0; i < AMOUNT_OF_SEQUENCES; i++) {
-            assertEquals(expectedResults[i], SequencesAnalyzer.findAmountOfMonotoneSequences(sequences[i]));
+            expected = expectedResults[i];
+            real = Sequences.findAmountOfMonotoneSequences(sequences[i]);
+
+            assertEquals(expected, real);
+
+            System.out.printf("Expected value %d  real value %d  Sequence ", expected, real);
+            System.out.println(Arrays.toString(sequences[i]));
         }
     }
 }
